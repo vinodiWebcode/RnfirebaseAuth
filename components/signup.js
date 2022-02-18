@@ -25,7 +25,7 @@ export default class Signup extends Component {
 
   registerUser = () => {
     if (this.state.email === '' && this.state.password === '') {
-      Alert.alert('Enter details to signup!')
+      alert('Enter details to signup!')
     } else {
       this.setState({
         isLoading: true,
@@ -37,7 +37,7 @@ export default class Signup extends Component {
           res.user.updateProfile({
             displayName: this.state.displayName
           })
-          console.log('User registered successfully!')
+          alert('User registered successfully!')
           this.setState({
             isLoading: false,
             displayName: '',

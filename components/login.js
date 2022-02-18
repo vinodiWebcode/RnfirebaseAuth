@@ -24,7 +24,7 @@ export default class Login extends Component {
 
   userLogin = () => {
     if (this.state.email === '' && this.state.password === '') {
-      Alert.alert('Enter details to signin!')
+      alert('Enter details to signin!')
     } else {
       this.setState({
         isLoading: true,
@@ -34,7 +34,7 @@ export default class Login extends Component {
         .signInWithEmailAndPassword(this.state.email, this.state.password)
         .then((res) => {
           console.log(res)
-          console.log('User logged-in successfully!')
+          alert('User logged-in successfully!')
           this.setState({
             isLoading: false,
             email: '',
@@ -59,7 +59,7 @@ export default class Login extends Component {
         <TextInput
           style={styles.inputStyle}
           placeholder="Email"
-          value={this.state.email}
+          value={this.state.email} 
           onChangeText={(val) => this.updateInputVal(val, 'email')}
         />
         <TextInput

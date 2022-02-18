@@ -11,7 +11,6 @@ import Dashboard from './components/dashboard';
 const Stack = createNativeStackNavigator();
 function MyStack() {
   return (
-    // <NavigationContainer>
     <Stack.Navigator
       initialRouteName="Signup"
       screenOptions={{
@@ -46,7 +45,6 @@ function MyStack() {
         }
       />
     </Stack.Navigator>
-    // </NavigationContainer>
 
   );
 }
